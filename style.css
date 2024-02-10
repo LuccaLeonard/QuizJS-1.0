@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', Sans-serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antiaLiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.788);
+}
+
+main {
+    max-width: 648px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    margin-top: 64px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #5a5a5abb;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #e2e9f0;
+}
+
+#quiz {
+    counter-reset: quiz-item;
+}
+
+.quiz-item {
+    margin-top: 24px;
+    border: 1px solid #5a5a5abb;
+    border-radius: 6px;
+    
+    overflow: hidden;
+}
+
+.quiz-item h3 {
+    padding: 16px 20px;
+    color: #e2e9f0;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background-color: rgba(39, 36, 36, 0.397);
+}
+
+.quiz-item h3::before{
+    counter-increment: quiz-item;
+    content: counter(quiz-item);
+
+    background-color: #5a5a5abb;
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.quiz-item dl {
+    padding: 20px 24px;
+    display: grid;
+    gap: 10px;
+}
+
+.quiz-item dl dt {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #e2e9f0;
+}
+
+input {
+    all: unset;
+    border: 1px solid grey;
+    width: 16px;
+    height: 16px;
+
+    border-radius: 60%;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-shrink: 0;
+}
+
+input:checked {
+    border: 1px solid rgb(151, 99, 1);
+}
+
+input:checked::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+
+    background-color: rgb(151, 99, 1);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#acertos {
+    text-align: center;
+    background-color: rgb(151, 99, 1);
+    color: rgb(185, 185, 185);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px;
+}
