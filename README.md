@@ -20,10 +20,6 @@ Você pode testar o quiz diretamente pelo GitHub Pages:
 - CSS3
 - JavaScript
 
-## 📷 Captura de tela
-
-![Screenshot do QuizJS](./QuizJS-1.0.png)
-
 ## 📁 Como executar localmente
 
 1. Clone o repositório:
